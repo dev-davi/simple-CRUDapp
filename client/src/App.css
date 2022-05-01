@@ -1,0 +1,31 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Data input {
+  width: 300px;
+  height: 25px;
+  font-size: 15px;
+  padding-left: 3px;
+  margin: 3px;
+}
+
+.Data button {
+  width: 310px;
+  height: 25px;
+  font-size: 15px;
+  padding-left: 3px;
+  margin: 15px;
+}
+
+.Data button:hover {
+  cursor: pointer;
+}
