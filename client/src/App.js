@@ -1,12 +1,26 @@
 import { useState } from "react";
 import "./App.css";
+import Axios from "axios";
 
 function App() {
   const [name, setName] = useState("");
   const [age, setAge] = useState(0);
-  const [citizenshiip, setCitizenship] = useState("");
+  const [citizenship, setCitizenship] = useState("");
   const [position, setPosition] = useState("");
   const [wage, setWage] = useState(0);
+
+  const addEmployee = () => {
+    console.log(name);
+    Axios.post("http://localhost:3001/create", {
+      name: name,
+      age: age,
+      citizenship: citizenship,
+      position: position,
+      wage: wage,
+    }).then(() => {
+      console.log("success!");
+    });
+  };
 
   return (
     <div className="App">
@@ -56,7 +70,7 @@ function App() {
           }}
           required
         />
-        <button>Add Employee</button>
+        <button onClick={addEmployee}>Add Employee</button>
       </div>
     </div>
   );
